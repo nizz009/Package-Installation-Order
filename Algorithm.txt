@@ -1,4 +1,4 @@
-//definition of node:
+*definition of node:*
 package {
 	string id
 	string[] ids_its_dependent_on
@@ -12,7 +12,7 @@ node {
 	bool flag
 }
 
-//arrangement in array:
+*arrangement in array:*
 function arrangement(tree root, array[], child_num)
 {
 	static pos = 0
