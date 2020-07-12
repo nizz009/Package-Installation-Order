@@ -7,7 +7,7 @@ The packages are set in a tree which is then sorted into an array according to s
 
 *The properties of the tree will be:*
 
- Nodes : packages;
+ Nodes : packages
  
  Child nodes: packages on which the parent nodes are dependent.
 
