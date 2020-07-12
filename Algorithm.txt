@@ -1,0 +1,39 @@
+//definition of node:
+package {
+	string id
+	string[] ids_its_dependent_on
+}
+package [] packages
+
+node {
+	string id
+	int children_count
+	node [] children
+	bool flag
+}
+
+//arrangement in array:
+function arrangement(tree root, array[], child_num)
+{
+	static pos = 0
+
+	if(root->children[child_num].flag == 0)
+	{
+		parent = root
+		child = parent
+		while(child->children[0])
+		{
+			parent = child
+			child = children[0]
+		}
+
+		//found the node with no children; add it to the array
+		array[pos++] = children[0]
+		children[0].flag = 1
+	}
+
+	if(child_num < parent.children_count - 1)
+		arrangement(parent, array[], child_num + 1)
+	else
+		return
+}
